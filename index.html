@@ -1,0 +1,372 @@
+<!doctype html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="utf-8">
+	<title>Proshko Viktoriya</title>
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/flickity.css" media="screen">
+	
+</head>
+
+<body>
+	
+	<!--Phone-->
+	<!--nakładka pełnoekranowa-->
+	<div class="navig">
+	<div class="nakladka" id="MENU">
+		<a href="javascript:void(0)" class="zamknijX" onClick="zamknijMenu()">
+			&times;
+		</a>
+		<ol>
+			<li><a href="#about" onClick="zamknijMenu()">About</a></li>
+			<li><a href="#history" onClick="zamknijMenu()">History</a></li>
+			<li><a href="#visit" onClick="zamknijMenu()">Visit</a></li>
+		</ol>
+	</div>
+	<div class="logo-center">
+		<a href="#start"><img src="img/logo.png" alt="logo"></a>
+	</div>
+	<!--Ikona burger menu-->
+	<span class="burger" onClick="otworzMenu()">&#9776;</span>
+	</div>
+	<!--JS-->
+	<script>
+		function otworzMenu(){
+			document.getElementById("MENU").style.width="100%";
+		}
+		function zamknijMenu(){
+			document.getElementById("MENU").style.width="0";
+		}
+	</script>
+	
+	<!--Desktop-->
+	<nav id="navbar" class="navbar">
+		<div class="navleft">
+			<a href="#start"><img src="img/logo.png" alt="logo"></a>
+		</div>
+		<div class="navcenter">
+			<ol>
+				<li><a href="#about">About</a></li>
+				<li><a href="#history">History</a></li>
+				<li><a href="#visit">Visit</a></li>
+			</ol>
+		</div>
+		<div class="navright">
+			<a href="#">Buy tickets</a>
+		</div>
+	</nav>
+	
+	<script>
+        function changeBg(){
+            var navbar = document.getElementById('navbar');
+            var scrollValue = window.scrollY;
+            console.log(scrollValue);/*można usunąć*/
+            if(scrollValue < 200){
+                navbar.classList.remove('bgColor');
+            }                        
+            else{
+                navbar.classList.add('bgColor');
+            }
+        }
+        window.addEventListener('scroll', changeBg);
+	</script>
+
+	<section id="start">
+	</section>
+	
+	<section id="information">
+		<div class="column">
+			<article>
+				<h3>
+					OPEN TODAY
+				</h3>
+				<p class="lead">
+					9 A.M. - 12 A.M.
+				</p>
+			</article>
+			<article>
+				<h3>
+					TONIGHT'S LIGHTS
+				</h3>
+				<p class="lead">
+					DYNAMIC PURPLE AND WHITE
+				</p>
+				
+			</article>
+			<article>
+			
+				<h3>
+					61°F
+				</h3>
+				<p class="lead">
+					16°C
+				</p>
+			</article>
+		</div>
+		<div class="groupcolumn" id="carousel-desktop">
+			<article>
+				<h2>
+					PREMIUM EXPERIENCE
+				</h2>
+				<p>
+					Discover even more of the Empire State Building. Enjoy a guided 90-minute tour that includes the building’s lovingly restored Art Deco lobby on 5th Avenue, the Celebrity Walk, and exhibits that celebrate 
+					the building’s history and heritage.
+				</p>
+			
+				<footer>
+					<a href="#">Learn more<span class="material-icons-sharp material-icons">arrow_forward_ios</span></a>
+				</footer>
+			</article>
+			<article>
+				<h2>
+					EXPRESS PASS
+				</h2>
+				<p>
+					Bypass all queues and take our red carpet all the way up to the very top of the building! Pass includes expedited entry to the 86th and 102nd Floors.  Phasellus tristique, diam at egestas ultrices, erat ex varius eros, quis congue ligula est dolor sit amet.
+				</p>
+				<footer>
+					<a href="#">Learn more<span class="material-icons-sharp material-icons">arrow_forward_ios</span></a>
+				</footer>
+			</article>
+			<article>
+				<h2>
+					SAVE WITH CITYPASS
+				</h2>
+				<p>
+					One easy CityPASS purchase saves 40% at ESB plus 4 more top NYC attractions. CityPASS includes our AM/PM Experience: 86th floor observatory and BONUS same-night admission 3 hours before closing. Phasellus tristique, diam egestas.
+				</p>
+				<footer>
+					<a href="#">Learn more<span class="material-icons-sharp material-icons">arrow_forward_ios</span></a>
+				</footer>
+			</article>
+		</div>
+		
+		<div class="main-gallery groupcolumn" id="carousel-mobile">
+			<article class="gallery-cell">
+				<h2>
+					PREMIUM EXPERIENCE
+				</h2>
+				<p>
+					Discover even more of the Empire State Building. Enjoy a guided 90-minute tour that includes the building’s lovingly restored Art Deco lobby on 5th Avenue, the Celebrity Walk, and exhibits that celebrate the building’s history and heritage.
+				</p>
+			
+				<footer>
+					<a href="#">Learn more<span class="material-icons-sharp material-icons">arrow_forward_ios</span></a>
+				</footer>
+			</article>
+			<article class="gallery-cell">
+				<h2>
+					EXPRESS PASS
+				</h2>
+				<p>
+					Bypass all queues and take our red carpet all the way up to the very top of the building! Pass includes expedited entry to the 86th and 102nd Floors.  Phasellus tristique Phasellus tristique diam erat ex varius eros, quis congue ligula est dolor sit amet.
+				</p>
+				<footer>
+					<a href="#">Learn more<span class="material-icons-sharp material-icons">arrow_forward_ios</span></a>
+				</footer>
+			</article>
+			<article class="gallery-cell">
+				<h2>
+					SAVE WITH CITYPASS
+				</h2>
+				<p>
+					One easy CityPASS purchase saves 40% at ESB plus 4 more top NYC attractions. CityPASS includes our AM/PM Experience: 86th floor observatory and BONUS same-night admission 3 hours before closing.
+					 Phasellus tristique, diam egestas.
+				</p>
+				<footer>
+					<a href="#">Learn more<span class="material-icons-sharp material-icons">arrow_forward_ios</span></a>
+				</footer>
+			</article>
+		</div>
+		
+		<div class="slideshow-container">
+			<div class="mySlides fade">
+				<div class="numbertext">1 / 3</div>
+					<div class="text">
+						<h2>
+							PREMIUM EXPERIENCE
+						</h2>
+						<p>
+							Discover even more of the Empire State Building. Enjoy a guided 90-minute tour that includes the building’s lovingly restored Art Deco lobby on 5th Avenue, the Celebrity Walk, and exhibits that celebrate the building’s history and heritage.
+						</p>
+
+						<footer>
+							<a href="#">Learn more<span class="material-icons-sharp material-icons">arrow_forward_ios</span></a>
+						</footer>
+					</div>
+			</div>
+			
+			<div class="mySlides fade">
+				<div class="numbertext">2 / 3</div>
+				<div class="text">
+					<h2>
+						EXPRESS PASS
+					</h2>
+					<p>
+						Bypass all queues and take our red carpet all the way up to the very top of the building! Pass includes expedited entry to the 86th and 102nd Floors.
+					</p>
+					<footer>
+						<a href="#">Learn more<span class="material-icons-sharp material-icons">arrow_forward_ios</span></a>
+					</footer>
+				</div>
+			</div>
+			
+			<div class="mySlides fade">
+				<div class="numbertext">3 / 3</div>
+				<div class="text">
+					<h2>
+						PREMIUM EXPERIENCE
+					</h2>
+					<p>
+						Discover even more of the Empire State Building. Enjoy a guided 90-minute tour that includes the building’s lovingly restored Art Deco lobby on 5th Avenue, the Celebrity Walk, and exhibits that celebrate the building’s history and heritage.
+					</p>
+
+					<footer>
+						<a href="#">Learn more<span class="material-icons-sharp material-icons">arrow_forward_ios</span></a>
+					</footer>
+				</div>	
+			</div>
+			<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+			<a class="next" onclick="plusSlides(1)">&#10095;</a>
+		</div>
+	<br>
+	<div style="text-align:center">
+	  <span class="dot" onclick="currentSlide(1)"></span>
+	  <span class="dot" onclick="currentSlide(2)"></span>
+	  <span class="dot" onclick="currentSlide(3)"></span>
+	</div>
+		<div class="Button">
+			<a href="#">Buy tickets</a>
+		</div>
+	</section>
+	
+	
+	
+	<div id="background">
+		<section id="about">
+			<h1 class="target">THE HEART OF NY</h1>
+			<div class="container">
+				<img src="img/Widok.jpg" alt="Widok">
+			<div class="top-left">
+				<header>
+					<h2>
+						ABOUT 
+					</h2>
+				</header>
+					<p class="lead">
+						There’s plenty to discover about the World’s Most Famous Building, from its rich history to its unique design.
+					</p>
+					<p>
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sagittis ornare iaculis. Mauris tempus dignissim tempor. Phasellus tristique, diam at egestas ultrices, erat ex varius eros, quis congue ligula est a neque.
+						<br><br>
+						Nulla eleifend erat non lectus hendrerit, quis placerat sapien gravida. Fusce ullamcorper eget turpis at mollis. Pellentesque vulputate consequat facilisis. Facere sequi facilis reiciendis ipsam tempore est officiis atque eaque.
+					</p>
+				<footer>
+					<a href="#">Learn more<span class="material-icons-sharp material-icons">arrow_forward_ios</span></a>
+				</footer>
+			</div>
+			</div>
+		</section>
+
+		<section id="history">
+			<div class="container">
+			<div class="img1300">
+				<img src="img/Budowa.jpg" alt="building">
+			</div>
+			<div class="zawartosc wrap-flex">
+				<div class="textsection">
+					<header>
+						<h2>
+							HISTORY 
+						</h2>
+					</header>
+						<p>
+							Intended to be the world's first 100+ story building, construction of the Empire State Building began on March 17, 1930. Construction was completed in a record-breaking 1 year and 45 days. Beautiful inside and out, the Empire State Building is an architectural marvel beloved across the world.
+							<br><br>
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sagittis ornare iaculis. Mauris tempus dignissim tempor. Phasellus tristique, diam at egestas ultrices, erat ex varius eros, quis congue ligula est a neque. Phasellus cursus purus ante, quis egestas risus vulputate vitae. Vestibulum non aliquet elit. Quisque cursus fermentum sollicitudin. Duis tristique tortor sit amet ornare molestie. Ut risus quam, consequat vel iaculis id, dictum ac magna.  
+						</p>
+					<footer>
+						<a href="#">Learn more<span class="material-icons-sharp material-icons">arrow_forward_ios</span></a>
+					</footer>
+				</div>
+				<div class="imgsection">
+					<div class="image-1">
+						<img src="img/Budowa.jpg" alt="building">
+					</div>
+					<div class="image-2">
+						<img  src="img/Godzila.jpg">
+					</div>
+					<div class="image-3">
+						<img src="img/Pracowniki.jpg">
+					</div>
+					<div  class="image-4">
+						<img src="img/Pracownik.jpg">
+					</div>
+				</div>
+			</div>
+			</div>
+		</section>
+
+		<section id="visit">
+			<div class="zawartosc">
+				<!--
+				<center><a href="https://goo.gl/maps/359J1hk4xfX7Sb94A"><img src="img/Mapa.png" alt="mapa" ></a></center>-->
+				<center><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.6175398570613!2d-73.98566439999999!3d40.7484405!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c259a9b3117469%3A0xd134e199a405a163!2sEmpire%20State%20Building!5e0!3m2!1spl!2spl!4v1686656148383!5m2!1spl!2spl" width="713" height="430" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></center>
+				<div class="contact-container">
+					<div class="Contact">
+						<form>
+							<main>
+							<h2>
+								STAY CONNECTED
+							</h2>
+							<p>
+								Sign up today to be the first to receive exclusive news on Tower Lightings, Celebrity Visitors and Insider Tips from the Empire State Building
+							</p>
+							<input type="email" placeholder="Email">
+							<br/>
+							</main>
+							<input type="submit" value="SUBMIT">
+						</form>
+					</div>
+				</div>
+				<h2>
+				
+				</h2>
+			</div>
+		</section>
+		<section id="stopka">
+			<div class="stopka-top">
+				<div class="info">
+					<a href="#">Great Towers</a>
+					<a href="#">Ticket Policies</a>
+					<a href="#">Privacy Policy</a>
+					<a href="#">Web Accessibility</a>
+					<a href="#">Sitemap</a>
+				</div>
+				<div class="Socialmedia">
+					<a href="#" class="fa fa-facebook"></a>
+					<a href="#" class="fa fa-twitter"></a>
+					<a href="#" class="fa fa-instagram"></a>
+				</div>
+			</div>
+			<h6>
+				<p>Copyright &copy; Proshko Viktoriya 2023</p>
+			</h6>
+		</section>
+	</div>
+	<script src="flickity.pkgd.min.js"></script>
+	<script>
+		var flkty = new Flickity( '.main-gallery', {
+		  // options
+		  cellAlign: 'left',
+		  contain: true,
+		  prevNextButtons: false,
+		  pageDots: true
+		});
+	</script>
+</body>
+</html>
